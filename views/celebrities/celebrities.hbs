@@ -1,0 +1,39 @@
+<!--<div>
+    <h2>Celebrities List</h2>     
+    {{#each celebrities}}
+        <div>
+            {{this.name}}
+
+            {{this.occupation}}
+
+            {{this.catchPhrase}}
+            
+            <hr>
+        </div>   
+    {{/each}}
+</div> -->
+
+    <div>
+
+    <h3> Create a new celebrity</h3>
+
+    <form action="/celebrities/create" method="POST"> 
+          <label> Name
+      <input type="text" name="name" placeholder="name of your celebrity" />
+    </label>
+
+    <label> Occupation
+      <input type="text" name="occupation" placeholder="Are they even busy?" />
+    </label>
+
+     <label> CatchPhrase
+      <input type="text" name="catchphrase" placeholder="Is it catchy?" />
+    </label>
+
+    <button type="submit"> Create your celebrity </button>
+    </form>
+
+    {{#if errorMessage}}
+    <p> There was a problem: {{errorMessage}}</p>
+    {{/if}}
+</div>
